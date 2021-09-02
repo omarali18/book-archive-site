@@ -9,6 +9,11 @@
     <!-- Bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        #spinner {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,12 +25,23 @@
             <button onclick="searchClick()" class="btn btn-outline-secondary" type="button"
                 id="button-addon2">Search</button>
         </div>
+
+
     </section>
     <section class="container">
-        <!-- Error handler div -->
-        <div>
 
+        <!-- Spinner div -->
+        <div id="spinner" class="text-center mt-5">
+            <div class="spinner-border text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div>
+
+        <!-- Error handler div -->
+        <div id="error" class="w-25 mx-auto p-5">
+
+
+        </div id="display-result">
 
         <!-- Search result div -->
         <div>
