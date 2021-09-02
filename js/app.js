@@ -7,6 +7,7 @@ const toggleSpinner = direction => {
 const allClear = () => {
     document.getElementById("input-field").value = "";
     document.getElementById("error").textContent = "";
+    document.getElementById("search-count").textContent = "";
     document.getElementById("display-result").textContent = "";
 }
 // onclick function
@@ -48,6 +49,9 @@ const displayBooks = (books, searchResult) => {
         toggleSpinner("none")
     }
     const resultContainer = document.getElementById("display-result");
+    document.getElementById("search-count").innerHTML = `
+    <p>${searchResult}/${books.length}</p>
+    `;
     books.forEach(book => {
         console.log(book);
         const div = document.createElement("div");
